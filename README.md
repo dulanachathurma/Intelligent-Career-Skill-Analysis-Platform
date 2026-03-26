@@ -2,6 +2,7 @@
 
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen?logo=github)](https://dulanachathurma.github.io/Intelligent-Career-Skill-Analysis-Platform/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **AI-powered career platform that dynamically analyzes resumes and provides intelligent skill mapping, career recommendations, and job market insights.**
@@ -10,7 +11,7 @@
 
 ## 🌟 Live Demo
 
-[View Live Demo](https://your-demo-link.com) | [Report Bug](https://github.com/yourusername/nexgenai/issues) | [Request Feature](https://github.com/yourusername/nexgenai/issues)
+**[View Live Demo](https://dulanachathurma.github.io/Intelligent-Career-Skill-Analysis-Platform/)** | [Report Bug](https://github.com/dulanachathurma/Intelligent-Career-Skill-Analysis-Platform/issues) | [Request Feature](https://github.com/dulanachathurma/Intelligent-Career-Skill-Analysis-Platform/issues)
 
 ---
 
@@ -113,5 +114,17 @@ NexGenAI is a cutting-edge career intelligence platform that leverages artificia
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/nexgenai.git
-   cd nexgenai
+   git clone https://github.com/dulanachathurma/Intelligent-Career-Skill-Analysis-Platform.git
+   cd Intelligent-Career-Skill-Analysis-Platform
+
+  ## 📞 Contact
+
+Project Maintainer: Dulan Chathurma
+Email: dulanachathurma272@gmail.com
+GitHub: @dulanachathurma
+LinkedIn: Dulan Chathurma
+
+Project Link: https://github.com/dulanachathurma/Intelligent-Career-Skill-Analysis-Platform
+
+Live Demo: https://dulanachathurma.github.io/Intelligent-Career-Skill-Analysis-Platform/
+
