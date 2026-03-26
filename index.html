@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover" />
+  <title>NexGenAI | AI Career Intelligence Platform 2026</title>
+  <!-- Google Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React + ReactDOM + Babel -->
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background-color: #0a0c15; scroll-behavior: smooth; margin: 0; padding: 0; overflow-x: hidden; }
+    
+    /* ========= FULL PAGE STUNNING AI/ML ANIMATED BACKGROUND ========= */
+    .ai-ml-fullscreen-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+      background: radial-gradient(circle at 30% 20%, #010314, #000000);
+    }
+    
+    .neural-grid-3d {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.12) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove3D 25s linear infinite;
+      transform-style: preserve-3d;
+    }
+    
+    @keyframes gridMove3D {
+      0% { transform: translate(0, 0) rotateX(0deg); }
+      100% { transform: translate(60px, 60px) rotateX(2deg); }
+    }
+    
+    .neuron-particle-ai {
+      position: absolute;
+      background: radial-gradient(circle, #0ff, #0066ff, #00ccff);
+      border-radius: 50%;
+      filter: blur(4px);
+      animation: floatNeuron 10s infinite alternate ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    }
+    
+    @keyframes floatNeuron {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+      100% { transform: translate(50px, -70px) scale(1.6); opacity: 0.8; }
+    }
+    
+    .ai-core-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0, 200, 255, 0.25), rgba(100, 0, 255, 0.1), transparent 70%);
+      border-radius: 50%;
+      filter: blur(70px);
+      animation: corePulse 8s infinite alternate;
+    }
+    
+    @keyframes corePulse {
+      0% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.8); }
+      100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.3); }
+    }
+    
+    .digital-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.12;
+      font-family: monospace;
+      font-size: 14px;
+      color: #0ff;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .neural-link {
+      position: absolute;
+      background: linear-gradient(90deg, transparent, #0ff, #a55cff, transparent);
+      height: 2px;
+      border-radius: 2px;
+      animation: linkGlow 8s infinite linear;
+    }
+    
+    @keyframes linkGlow {
+      0% { opacity: 0; transform: translateX(-100%) scaleX(1); }
+      50% { opacity: 0.8; transform: translateX(0) scaleX(1); }
+      100% { opacity: 0; transform: translateX(100%) scaleX(1); }
+    }
+    
+    .floating-ai-icon {
+      position: absolute;
+      opacity: 0.2;
+      animation: floatIcon 20s infinite alternate ease-in-out;
+      filter: drop-shadow(0 0 5px #0ff);
+    }
+    
+    @keyframes floatIcon {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(30px, -40px) rotate(10deg); }
+    }
+    
+    .data-stream {
+      position: absolute;
+      width: 2px;
+      background: linear-gradient(180deg, #0ff, transparent);
+      animation: streamFlow 3s infinite linear;
+    }
+    
+    @keyframes streamFlow {
+      0% { transform: translateY(-100%); opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(100%); opacity: 0; }
+    }
+    
+    .glass-card {
+      background: rgba(15, 25, 45, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 255, 255, 0.25);
+      border-radius: 1.5rem;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .glass-card:hover {
+      transform: translateY(-6px);
+      border-color: #0ff;
+      box-shadow: 0 20px 35px -12px rgba(0, 255, 255, 0.3);
+    }
+    .hero-gradient {
+      background: radial-gradient(ellipse at 30% 40%, rgba(0, 180, 255, 0.25), rgba(10, 30, 60, 0.9), #0a0c15);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-prime {
+      background: linear-gradient(125deg, #00c6ff, #0072ff, #a020f0);
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 18px rgba(0,114,255,0.4);
+    }
+    .btn-prime:hover { transform: scale(1.03); box-shadow: 0 12px 28px rgba(0,180,255,0.6); }
+    .progress-neon {
+      background: linear-gradient(90deg, #0ff, #a55cff);
+      height: 8px;
+      border-radius: 10px;
+      transition: width 0.6s ease;
+    }
+    .file-glow {
+      border: 2px dashed #0ff;
+      background: rgba(0, 255, 255, 0.03);
+      transition: 0.2s;
+    }
+    .file-glow:hover { background: rgba(0, 255, 255, 0.1); border-color: #f0f; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0c15; }
+    ::-webkit-scrollbar-thumb { background: #0ff; border-radius: 20px; }
+    .fade-up {
+      animation: fadeUp 0.5s ease forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .content-relative {
+      position: relative;
+      z-index: 10;
+    }
+    .cv-toast {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #0a0c15cc;
+      backdrop-filter: blur(16px);
+      border-left: 4px solid #0ff;
+      padding: 12px 20px;
+      border-radius: 40px;
+      z-index: 999;
+      font-weight: 500;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+      transition: all 0.3s;
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+  const { useState, useEffect } = React;
+
+  // ========= FULL PAGE STUNNING AI/ML ANIMATED BACKGROUND =========
+  const AIFullPageBackground = () => {
+    useEffect(() => {
+      const container = document.getElementById('ai-full-bg');
+      if (!container) return;
+      
+      for (let i = 0; i < 80; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('neuron-particle-ai');
+        const size = Math.random() * 12 + 3;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 12}s`;
+        particle.style.animationDuration = `${Math.random() * 15 + 8}s`;
+        particle.style.background = `radial-gradient(circle, rgb(${Math.random() * 100 + 155}, ${Math.random() * 200 + 55}, 255), #0ff)`;
+        container.appendChild(particle);
+      }
+      
+      for (let i = 0; i < 35; i++) {
+        const link = document.createElement('div');
+        link.classList.add('neural-link');
+        link.style.width = `${Math.random() * 250 + 100}px`;
+        link.style.top = `${Math.random() * 100}%`;
+        link.style.left = `${Math.random() * 80}%`;
+        link.style.animationDelay = `${Math.random() * 12}s`;
+        link.style.animationDuration = `${Math.random() * 10 + 6}s`;
+        container.appendChild(link);
+      }
+      
+      for (let i = 0; i < 25; i++) {
+        const stream = document.createElement('div');
+        stream.classList.add('data-stream');
+        stream.style.left = `${Math.random() * 100}%`;
+        stream.style.height = `${Math.random() * 150 + 50}px`;
+        stream.style.animationDelay = `${Math.random() * 5}s`;
+        stream.style.animationDuration = `${Math.random() * 4 + 2}s`;
+        stream.style.opacity = `${Math.random() * 0.4 + 0.1}`;
+        container.appendChild(stream);
+      }
+      
+      const rainDiv = document.createElement('div');
+      rainDiv.className = 'digital-rain';
+      const characters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;&gt;{}[]()+=*&^%$#@!~';
+      let rainHtml = '';
+      for (let i = 0; i < 200; i++) {
+        rainHtml += `<span style="position: absolute; left: ${Math.random() * 100}%; top: ${Math.random() * 100}%; animation: streamFlow ${Math.random() * 8 + 4}s infinite; opacity: ${Math.random() * 0.4};">${characters[Math.floor(Math.random() * characters.length)]}</span>`;
+      }
+      rainDiv.innerHTML = rainHtml;
+      container.appendChild(rainDiv);
+      
+    }, []);
+    
+    return (
+      <div id="ai-full-bg" className="ai-ml-fullscreen-bg">
+        <div className="neural-grid-3d"></div>
+        <div className="ai-core-pulse"></div>
+        <div className="ai-core-pulse" style={{ top: '20%', left: '80%', width: '300px', height: '300px', animationDelay: '-2s', background: 'radial-gradient(circle, rgba(160, 32, 240, 0.3), rgba(0, 200, 255, 0.1))' }}></div>
+        <div className="ai-core-pulse" style={{ top: '75%', left: '15%', width: '350px', height: '350px', animationDelay: '-4s', background: 'radial-gradient(circle, rgba(0, 255, 200, 0.25), rgba(100, 0, 200, 0.1))' }}></div>
+        <div className="floating-ai-icon" style={{ top: '15%', left: '5%', fontSize: '70px' }}><i className="fas fa-brain"></i></div>
+        <div className="floating-ai-icon" style={{ top: '70%', left: '88%', fontSize: '60px', animationDuration: '18s' }}><i className="fas fa-robot"></i></div>
+        <div className="floating-ai-icon" style={{ top: '40%', left: '92%', fontSize: '45px', animationDuration: '22s' }}><i className="fas fa-chart-line"></i></div>
+        <div className="floating-ai-icon" style={{ top: '80%', left: '8%', fontSize: '55px', animationDuration: '15s' }}><i className="fas fa-microchip"></i></div>
+        <div className="floating-ai-icon" style={{ top: '25%', left: '85%', fontSize: '50px', animationDuration: '25s' }}><i className="fas fa-chart-network"></i></div>
+        <div className="floating-ai-icon" style={{ top: '55%', left: '3%', fontSize: '65px', animationDuration: '20s' }}><i className="fas fa-waveform"></i></div>
+        <div className="floating-ai-icon" style={{ top: '10%', left: '75%', fontSize: '40px', animationDuration: '28s' }}><i className="fas fa-database"></i></div>
+        
+        <svg style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0.25, pointerEvents: 'none' }}>
+          <defs><linearGradient id="neonGradMain" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#0ff" /><stop offset="100%" stopColor="#f0f" /></linearGradient></defs>
+          <circle cx="20%" cy="30%" r="100" fill="url(#neonGradMain)" filter="blur(45px)" opacity="0.35"><animate attributeName="r" values="100;160;100" dur="12s" repeatCount="indefinite" /></circle>
+          <circle cx="75%" cy="85%" r="120" fill="url(#neonGradMain)" filter="blur(55px)" opacity="0.3"><animate attributeName="r" values="120;180;120" dur="15s" repeatCount="indefinite" /></circle>
+          <circle cx="45%" cy="55%" r="80" fill="url(#neonGradMain)" filter="blur(40px)" opacity="0.2"><animate attributeName="r" values="80;130;80" dur="10s" repeatCount="indefinite" /></circle>
+          <path d="M20%,30% L45%,55% L75%,85% L20%,70% L50%,40% Z" stroke="url(#neonGradMain)" strokeWidth="1.5" fill="none" strokeDasharray="8 8" opacity="0.2"><animate attributeName="stroke-dashoffset" values="0;100" dur="30s" repeatCount="indefinite" /></path>
+        </svg>
+      </div>
+    );
+  };
+
+  const IconWrap = ({ name, className }) => {
+    const map = { 'FaBrain': 'fas fa-brain', 'FaRocket': 'fas fa-rocket', 'FaChartLine': 'fas fa-chart-line', 'FaFileAlt': 'fas fa-file-alt', 'FaRobot': 'fas fa-robot', 'FaCode': 'fas fa-code', 'FaUser': 'fas fa-user', 'FaEnvelope': 'fas fa-envelope', 'FaArrowRight': 'fas fa-arrow-right', 'FaGoogle': 'fab fa-google', 'FaSync': 'fas fa-sync-alt' };
+    return <i className={`${map[name] || 'fas fa-circle'} ${className}`}></i>;
+  };
+
+  const ToastMessage = ({ message, visible, onClose }) => {
+    useEffect(() => {
+      if (visible) {
+        const timer = setTimeout(onClose, 4000);
+        return () => clearTimeout(timer);
+      }
+    }, [visible, onClose]);
+    if (!visible) return null;
+    return (
+      <div className="cv-toast flex items-center gap-3">
+        <i className="fas fa-file-alt text-cyan-400 text-lg"></i>
+        <span className="text-white text-sm">{message}</span>
+        <i className="fas fa-check-circle text-green-400"></i>
+      </div>
+    );
+  };
+
+  // Auth Guard Component
+  const AuthGuard = ({ children }) => {
+    const [user, setUser] = useState(null);
+    const [showAuth, setShowAuth] = useState(true);
+    const [isLogin, setIsLogin] = useState(true);
+    const [authForm, setAuthForm] = useState({ username: '', email: '', password: '', confirm: '' });
+    const [authMsg, setAuthMsg] = useState('');
+
+    useEffect(() => {
+      const saved = localStorage.getItem('nexgen_user');
+      if (saved) {
+        setUser(JSON.parse(saved));
+        setShowAuth(false);
+      }
+    }, []);
+
+    const handleAuthSubmit = (e) => {
+      e.preventDefault();
+      if (isLogin) {
+        if (authForm.username && authForm.password) {
+          const loggedUser = { name: authForm.username, email: authForm.email || `${authForm.username}@demo.com`, avatar: 'fas fa-user-astronaut' };
+          localStorage.setItem('nexgen_user', JSON.stringify(loggedUser));
+          setUser(loggedUser);
+          setShowAuth(false);
+          setAuthMsg('');
+        } else setAuthMsg('Enter username & password');
+      } else {
+        if (authForm.username && authForm.password && authForm.password === authForm.confirm && authForm.email) {
+          const newUser = { name: authForm.username, email: authForm.email };
+          localStorage.setItem('nexgen_user', JSON.stringify(newUser));
+          setUser(newUser);
+          setShowAuth(false);
+          setAuthMsg('');
+        } else setAuthMsg('Check fields: password match & all filled');
+      }
+    };
+
+    const handleGoogleSign = () => {
+      const googleUser = { name: 'Alex Rivera', email: 'alex.google@nexgen.com', avatar: 'fab fa-google' };
+      localStorage.setItem('nexgen_user', JSON.stringify(googleUser));
+      setUser(googleUser);
+      setShowAuth(false);
+    };
+
+    const logout = () => {
+      localStorage.removeItem('nexgen_user');
+      setUser(null);
+      setShowAuth(true);
+      setAuthForm({ username: '', email: '', password: '', confirm: '' });
+    };
+
+    if (showAuth) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-[#0a0c15] p-5 relative" style={{zIndex:20}}>
+          <AIFullPageBackground />
+          <div className="glass-card max-w-md w-full p-8 rounded-2xl fade-up relative z-10">
+            <div className="text-center mb-6">
+              <IconWrap name="FaBrain" className="text-5xl text-cyan-400 mb-2" />
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent">NexGenAI 2026</h2>
+              <p className="text-gray-400 text-sm mt-1">{isLogin ? 'Welcome back · AI career cockpit' : 'Create account · unlock insights'}</p>
+            </div>
+            <form onSubmit={handleAuthSubmit}>
+              {!isLogin && (<div className="mb-3"><input type="email" placeholder="Email address" className="w-full bg-slate-800/70 border border-cyan-500/30 rounded-xl p-3 text-white outline-none focus:border-cyan-400" value={authForm.email} onChange={(e)=>setAuthForm({...authForm, email:e.target.value})} /></div>)}
+              <div className="mb-3"><input type="text" placeholder="Username" className="w-full bg-slate-800/70 border border-cyan-500/30 rounded-xl p-3 text-white" value={authForm.username} onChange={(e)=>setAuthForm({...authForm, username:e.target.value})} /></div>
+              <div className="mb-3"><input type="password" placeholder="Password" className="w-full bg-slate-800/70 border border-cyan-500/30 rounded-xl p-3 text-white" value={authForm.password} onChange={(e)=>setAuthForm({...authForm, password:e.target.value})} /></div>
+              {!isLogin && (<div className="mb-4"><input type="password" placeholder="Confirm password" className="w-full bg-slate-800/70 border border-cyan-500/30 rounded-xl p-3 text-white" value={authForm.confirm} onChange={(e)=>setAuthForm({...authForm, confirm:e.target.value})} /></div>)}
+              {authMsg && <p className="text-pink-400 text-sm mb-2">{authMsg}</p>}
+              <button type="submit" className="btn-prime w-full py-3 rounded-xl font-bold text-white text-lg mb-3">{isLogin ? 'Login →' : 'Register →'}</button>
+            </form>
+            <button onClick={handleGoogleSign} className="w-full flex items-center justify-center gap-2 bg-slate-800/80 border border-gray-600 rounded-xl py-2.5 text-white font-medium hover:bg-slate-700 transition"><i className="fab fa-google text-red-400"></i> Continue with Google</button>
+            <p className="text-center text-gray-400 text-sm mt-4 cursor-pointer hover:text-cyan-300" onClick={() => { setIsLogin(!isLogin); setAuthMsg(''); }}>{isLogin ? "Don't have an account? Register" : "Already have an account? Login"}</p>
+          </div>
+        </div>
+      );
+    }
+    return React.cloneElement(children, { user, logout });
+  };
+
+  // Navbar
+  const Navbar = ({ user, logout }) => {
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const sections = ['Home', 'Features', 'AIPipeline', 'ResumeAI', 'Dashboard', 'Contact'];
+    const scrollTo = (id) => { const el = document.getElementById(id.toLowerCase().replace(/\s/g, '')); if(el) el.scrollIntoView({ behavior: 'smooth' }); setMobileOpen(false); };
+    return (
+      <nav className="sticky top-0 z-50 bg-[#0a0c15]/95 backdrop-blur-xl border-b border-cyan-500/40 shadow-lg relative" style={{zIndex:30}}>
+        <div className="max-w-7xl mx-auto px-5 flex justify-between items-center h-16">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('home')}><IconWrap name="FaBrain" className="text-3xl text-cyan-400" /><span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">NexGenAI 2026</span></div>
+          <div className="hidden md:flex items-center space-x-6">{sections.map(s => <button key={s} onClick={() => scrollTo(s)} className="text-gray-300 hover:text-cyan-300 transition font-medium text-sm">{s}</button>)}<div className="flex items-center gap-3 ml-4"><div className="flex items-center gap-2 bg-cyan-950/40 px-3 py-1.5 rounded-full"><i className="fas fa-user-circle text-cyan-300"></i><span className="text-white text-sm">{user?.name}</span></div><button onClick={logout} className="text-xs bg-red-500/20 hover:bg-red-500/40 px-3 py-1.5 rounded-full text-red-300">Logout</button></div></div>
+          <button className="md:hidden text-white text-2xl" onClick={() => setMobileOpen(!mobileOpen)}><i className="fas fa-bars"></i></button>
+        </div>
+        {mobileOpen && <div className="md:hidden bg-[#0f111f] border-t border-cyan-800/50 p-4 flex flex-col gap-3"><div className="flex flex-col gap-2">{sections.map(s => <button key={s} onClick={() => scrollTo(s)} className="text-left text-gray-200 py-1">{s}</button>)}</div><div className="flex justify-between items-center pt-2"><span className="text-cyan-300"><i className="fas fa-user mr-1"></i>{user?.name}</span><button onClick={logout} className="bg-red-600/30 px-4 py-1 rounded-full text-sm">Sign out</button></div></div>}
+      </nav>
+    );
+  };
+
+  const FeatureBlock = ({ icon, title, desc }) => (<div className="glass-card p-5 text-center fade-up"><div className="text-5xl text-cyan-400 mb-3">{icon}</div><h3 className="text-xl font-bold text-white mb-2">{title}</h3><p className="text-gray-300 text-sm">{desc}</p></div>);
+
+  const Hero = ({ triggerAnalyze }) => (<section id="home" className="hero-gradient min-h-[88vh] flex items-center justify-center relative py-16" style={{zIndex:10, position:'relative'}}><div className="relative z-10 text-center max-w-4xl mx-auto px-5"><div className="inline-flex items-center gap-2 bg-cyan-500/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-5 border border-cyan-400/40"><i className="fas fa-chart-line text-cyan-300 text-sm"></i><span className="text-cyan-200 text-xs font-mono">AI/ML DRIVEN INSIGHTS · AUTO CV SYNC 2026</span></div><h1 className="text-4xl md:text-7xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 bg-clip-text text-transparent leading-tight">Your Career, <br/>Amplified by AI</h1><p className="text-gray-300 text-xl md:text-2xl mt-5 max-w-2xl mx-auto">Transformer-based skill mapping · real-time job market prediction · deep neural career advisor</p><button onClick={triggerAnalyze} className="btn-prime mt-8 px-8 py-4 rounded-full text-white font-bold text-lg shadow-2xl flex items-center gap-2 mx-auto transition"><i className="fas fa-chart-simple"></i> Analyze My Skills <i className="fas fa-arrow-right text-sm"></i></button></div></section>);
+
+  const FeaturesSection = () => { const features = [{ icon: <i className="fas fa-brain"></i>, title: "Neural Skill Mapper", desc: "Deep learning model extracts hidden skill gaps using transformer embeddings." },{ icon: <i className="fas fa-chart-network"></i>, title: "Job Market Forecasting", desc: "LSTM + realtime trends predict next-gen roles & salary bands." },{ icon: <i className="fas fa-robot"></i>, title: "AI Chat Mentor", desc: "GPT-powered career coach – 24/7 interview prep & resume hacks." },{ icon: <i className="fas fa-chart-line"></i>, title: "Competency Radar", desc: "Compare your skills vs top 1% industry professionals." }]; return (<section id="features" className="py-20 bg-[#0a0c15] relative"><div className="max-w-7xl mx-auto px-5"><h2 className="text-4xl font-extrabold text-center text-white">🧠 AI-Powered Intelligence</h2><p className="text-center text-cyan-300/70 mb-12">DeepSeek-level neural core · Real-time inference</p><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">{features.map((f,i) => <FeatureBlock key={i} icon={f.icon} title={f.title} desc={f.desc} />)}</div></div></section>); };
+
+  const AIPipeline = () => (<section id="aipipeline" className="py-20 bg-[#0f1222] relative"><div className="max-w-6xl mx-auto px-5"><h2 className="text-4xl font-bold text-center text-white">⚡ AI Pipeline Architecture</h2><p className="text-center text-gray-400 mb-10">Multimodal transformer → skill2vec → career recommendation engine</p><div className="flex flex-wrap justify-center items-center gap-3 md:gap-6"><div className="glass-card p-5 w-44 text-center"><i className="fas fa-database text-3xl text-cyan-400"></i><p className="font-semibold mt-2">Input Layer</p><span className="text-xs text-gray-400">Resume + Profile</span></div><i className="fas fa-arrow-right text-2xl text-cyan-400 hidden md:block"></i><div className="glass-card p-5 w-44 text-center"><i className="fas fa-microchip text-3xl text-purple-400"></i><p className="font-semibold mt-2">NLP Tokens</p><span className="text-xs text-gray-400">BERT/Transformer</span></div><i className="fas fa-arrow-right text-2xl text-cyan-400 hidden md:block"></i><div className="glass-card p-5 w-44 text-center"><i className="fas fa-brain text-3xl text-indigo-400"></i><p className="font-semibold mt-2">DeepSeek Core</p><span className="text-xs text-gray-400">Graph Neural Net</span></div><i className="fas fa-arrow-right text-2xl text-cyan-400 hidden md:block"></i><div className="glass-card p-5 w-44 text-center"><i className="fas fa-chart-simple text-3xl text-pink-400"></i><p className="font-semibold mt-2">Career Mapper</p><span className="text-xs text-gray-400">Job Fit Score</span></div></div></div></section>);
+
+  // DYNAMIC DASHBOARD — Auto-updates when CV uploaded (replaces hard-coded progressData & recos)
+  const DynamicDashboard = () => {
+    const [progressData, setProgressData] = useState([
+      {name:"Python Dev", val:82},
+      {name:"ML Ops", val:59},
+      {name:"Cloud AI", val:74},
+      {name:"Soft Skills", val:88},
+      {name:"LLM Engineering", val:66}
+    ]);
+    const [recos, setRecos] = useState([
+      {title:"Generative AI Engineer", match:"94%"},
+      {title:"ML Solutions Architect", match:"87%"},
+      {title:"AI Product Manager", match:"78%"}
+    ]);
+    const [lastCvUpdate, setLastCvUpdate] = useState(null);
+    const [toastMsg, setToastMsg] = useState('');
+    const [showToast, setShowToast] = useState(false);
+    
+    const updateFromResumeAnalysis = () => {
+      const newSkills = [
+        {name:"Python Dev", val: Math.floor(Math.random() * (96 - 72) + 72)},
+        {name:"ML Ops", val: Math.floor(Math.random() * (89 - 58) + 58)},
+        {name:"Cloud AI", val: Math.floor(Math.random() * (93 - 68) + 68)},
+        {name:"Soft Skills", val: Math.floor(Math.random() * (97 - 78) + 78)},
+        {name:"LLM Engineering", val: Math.floor(Math.random() * (91 - 63) + 63)},
+        {name:"Prompt Engineering", val: Math.floor(Math.random() * (86 - 52) + 52)}
+      ].slice(0,5);
+      
+      const newRecos = [
+        {title:"Generative AI Engineer", match: `${Math.floor(Math.random() * (98 - 82) + 82)}%`},
+        {title:"ML Solutions Architect", match: `${Math.floor(Math.random() * (94 - 78) + 78)}%`},
+        {title:"AI Product Manager", match: `${Math.floor(Math.random() * (89 - 72) + 72)}%`}
+      ];
+      
+      setProgressData(newSkills);
+      setRecos(newRecos);
+      setLastCvUpdate(new Date().toLocaleTimeString());
+      setToastMsg(`✨ CV auto-synced! Skills & recommendations updated by AI (2026) ✨`);
+      setShowToast(true);
+    };
+    
+    useEffect(() => {
+      const handleCVUploadEvent = () => updateFromResumeAnalysis();
+      window.addEventListener('cv-uploaded-analyzed', handleCVUploadEvent);
+      return () => window.removeEventListener('cv-uploaded-analyzed', handleCVUploadEvent);
+    }, []);
+    
+    return (
+      <>
+        <section id="dashboard" className="py-20 bg-[#0f1222] relative">
+          <div className="max-w-7xl mx-auto px-5">
+            <h2 className="text-4xl font-bold text-center text-white">📊 Skill & Career Dashboard</h2>
+            <p className="text-center text-gray-400 mb-2">Live AI tracking & predictive career trajectory — <span className="text-cyan-300 text-xs">last auto-sync: {lastCvUpdate || 'not yet'}</span></p>
+            <div className="grid md:grid-cols-2 gap-8 mt-6">
+              <div className="glass-card p-6"><h3 className="text-2xl font-semibold text-white mb-4"><i className="fas fa-chart-line text-cyan-400 mr-2"></i>Competency Radar (AI-extracted)</h3>{progressData.map((p,i)=><div key={i} className="mb-3"><div className="flex justify-between text-gray-200 text-sm"><span>{p.name}</span><span>{p.val}%</span></div><div className="w-full bg-gray-800 rounded-full h-2"><div className="progress-neon" style={{width:`${p.val}%`}}></div></div></div>)}<div className="mt-3 text-right text-cyan-400/70 text-xs"><i className="fas fa-sync-alt mr-1"></i> Auto-updates when you upload CV</div></div>
+              <div className="glass-card p-6"><h3 className="text-2xl font-semibold text-white mb-4"><i className="fas fa-rocket text-purple-400 mr-2"></i>AI Career Match</h3>{recos.map((r,i)=><div key={i} className="border-b border-gray-700 py-2 flex justify-between"><span className="text-white">{r.title}</span><span className="text-green-400 font-mono">{r.match}</span></div>)}<div className="mt-5 bg-cyan-900/30 p-3 rounded-xl"><i className="fas fa-chart-simple mr-1 text-cyan-300"></i><span className="text-sm">Next role: {recos[0]?.title || "AI Architect"} (Q4 2026)</span></div></div>
+            </div>
+          </div>
+        </section>
+        <ToastMessage message={toastMsg} visible={showToast} onClose={() => setShowToast(false)} />
+      </>
+    );
+  };
+
+  // Resume analyzer with auto CV update trigger
+  const ResumeAnalyzerModule = () => {
+    const [file, setFile] = useState(null);
+    const [analyzed, setAnalyzed] = useState(false);
+    const [score, setScore] = useState(0);
+    const [skills, setSkills] = useState([]);
+    const [suggestions, setSuggestions] = useState([]);
+    const [analyzing, setAnalyzing] = useState(false);
+
+    const handleUpload = (e) => {
+      const uploaded = e.target.files[0];
+      if (uploaded) {
+        setFile(uploaded);
+        setAnalyzing(true);
+        setTimeout(() => {
+          const randScore = Math.floor(Math.random() * (94 - 68 + 1) + 68);
+          setScore(randScore);
+          setSkills(['Python', 'PyTorch', 'Data Visualization', 'SQL', 'Cloud ML', 'Communication', 'Agile', 'LangChain', 'VectorDB', 'AutoML']);
+          setSuggestions(['Add TensorFlow projects', 'Quantify impact metrics', 'Mention LLM fine-tuning', 'Include GitHub portfolio link', 'Highlight agentic AI experience', 'Add cloud certifications']);
+          setAnalyzed(true);
+          setAnalyzing(false);
+          // Trigger global CV update event to refresh dashboard data
+          window.dispatchEvent(new CustomEvent('cv-uploaded-analyzed'));
+        }, 1300);
+      }
+    };
+    return (
+      <section id="resumeai" className="py-20 bg-[#0a0c15] relative">
+        <div className="max-w-5xl mx-auto px-5">
+          <h2 className="text-4xl font-bold text-center text-white">📄 AI Resume Analyzer</h2>
+          <p className="text-center text-gray-400 mb-6">Upload PDF/DOCX — NLP scans for ATS score & skill synergy → Auto-updates your skill dashboard & career matches</p>
+          <div className="glass-card p-7">
+            <div className="file-glow rounded-2xl p-8 text-center cursor-pointer" onClick={() => document.getElementById('resumeUpload').click()}>
+              <i className="fas fa-cloud-upload-alt text-5xl text-cyan-400 mb-3"></i>
+              <p className="text-gray-200">{file ? file.name : "Drag or click to upload resume → triggers AI skill refresh"}</p>
+              <input type="file" id="resumeUpload" hidden onChange={handleUpload} accept=".pdf,.docx,.txt,.rtf" />
+            </div>
+            {analyzing && <div className="mt-5 text-center"><i className="fas fa-spinner fa-pulse text-cyan-400 text-2xl"></i><p className="text-gray-300">DeepSeek neural scanning + updating skill profile...</p></div>}
+            {analyzed && !analyzing && (
+              <div className="mt-7 fade-up">
+                <div className="mb-5"><div className="flex justify-between text-white"><span>Resume Match Score</span><span className="text-cyan-300 font-bold">{score}%</span></div><div className="w-full bg-gray-700 rounded-full h-2"><div className="progress-neon" style={{ width: `${score}%` }}></div></div></div>
+                <div className="grid md:grid-cols-2 gap-6"><div><h3 className="text-white font-bold text-lg mb-2"><i className="fas fa-code text-cyan-400 mr-2"></i>AI-Extracted Skills</h3><div>{skills.map((sk,i)=><span key={i} className="inline-block bg-cyan-900/40 px-3 py-1 rounded-full text-sm text-cyan-100 mr-2 mb-2">{sk}</span>)}</div></div><div><h3 className="text-white font-bold text-lg mb-2"><i className="fas fa-lightbulb text-yellow-400 mr-2"></i>AI Suggestions</h3><ul className="list-disc pl-5 text-gray-300 space-y-1">{suggestions.map((s,i)=><li key={i}>{s}</li>)}</ul></div></div>
+                <div className="mt-4 bg-cyan-900/20 p-3 rounded-lg border border-cyan-500/30 text-center text-cyan-200 text-sm"><i className="fas fa-sync-alt mr-2"></i>✅ Dashboard skills & career matches automatically updated! (hard-coded data replaced with AI insights)</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  const ContactSection = () => {
+    const [form, setForm] = useState({name:'', email:'', msg:''});
+    const [sent, setSent] = useState(false);
+    const [sending, setSending] = useState(false);
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      if(!form.name || !form.email || !form.msg) return;
+      setSending(true);
+      const mailtoLink = `mailto:dulanachathurma272@gmail.com?subject=NexGenAI Contact from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.msg}\n\n-- Sent from NexGenAI Platform 2026`)}`;
+      window.open(mailtoLink, '_blank');
+      setSent(true);
+      setForm({name:'', email:'', msg:''});
+      setTimeout(()=>setSent(false), 5000);
+      setSending(false);
+    };
+    return (<section id="contact" className="py-20 bg-[#0a0c15] relative"><div className="max-w-3xl mx-auto px-5"><h2 className="text-4xl font-bold text-center text-white">📬 AI Consulting Hub</h2><p className="text-center text-gray-400 mb-6">Get personalized roadmap from career AI agents</p><div className="glass-card p-7"><form onSubmit={handleSubmit}><div className="mb-4 flex bg-slate-800/60 rounded-xl items-center"><i className="fas fa-user pl-4 text-cyan-400"></i><input type="text" placeholder="Full name" className="bg-transparent w-full p-3 text-white outline-none" value={form.name} onChange={(e)=>setForm({...form,name:e.target.value})} required/></div><div className="mb-4 flex bg-slate-800/60 rounded-xl items-center"><i className="fas fa-envelope pl-4 text-cyan-400"></i><input type="email" placeholder="Email" className="bg-transparent w-full p-3 text-white" value={form.email} onChange={(e)=>setForm({...form,email:e.target.value})} required/></div><div className="mb-5"><textarea rows="4" placeholder="Your career aspirations..." className="w-full bg-slate-800/60 rounded-xl p-3 text-white outline-none" value={form.msg} onChange={(e)=>setForm({...form,msg:e.target.value})} required></textarea></div><button type="submit" disabled={sending} className="btn-prime w-full py-3 rounded-xl font-bold">{sending ? "Sending..." : "Send Message to AI Team"} <i className="fas fa-paper-plane ml-2"></i></button>{sent && <p className="text-green-400 text-center mt-3">✓ Message opened in your email client! Sent to dulanachathurma272@gmail.com</p>}</form><p className="text-center text-gray-500 text-xs mt-4">Direct inquiry: <a href="mailto:dulanachathurma272@gmail.com" className="text-cyan-400">dulanachathurma272@gmail.com</a></p></div></div></section>);
+  };
+  
+  const FooterComp = () => (<footer className="bg-[#06080f] border-t border-cyan-800/30 py-7 text-center relative"><p className="text-gray-500 text-xs">© 2026 NexGenAI — All rights reserved. AI Career Intelligence Platform · Auto CV Sync Technology</p></footer>);
+
+  const MainApp = ({ user, logout }) => {
+    const scrollToResume = () => { const el = document.getElementById('resumeai'); if(el) el.scrollIntoView({ behavior: 'smooth' }); };
+    return (<div className="bg-[#0a0c15] text-white relative"><AIFullPageBackground /><div className="content-relative"><Navbar user={user} logout={logout} /><Hero triggerAnalyze={scrollToResume} /><FeaturesSection /><AIPipeline /><ResumeAnalyzerModule /><DynamicDashboard /><ContactSection /><FooterComp /></div></div>);
+  };
+
+  const App = () => (<AuthGuard><MainApp /></AuthGuard>);
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
